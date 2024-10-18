@@ -26,8 +26,8 @@ function sendMessage(userMessage){
     const messageElement = document.createElement('div')
     messageElement.style.textAlign = 'right'
     messageElement.style.margin = '0.7rem'
-    messageElement.innerHTML = "<span><b>You: </b></span>" +
-                                "<span>" + userMessage + "</span>";
+    messageElement.innerHTML = "<span style='background-color:  rgb(177, 243, 206); padding: 0.2rem 1rem; border-radius: 8px'>" + userMessage + "</span>";
+                                
     chatContainer.appendChild(messageElement)
 }
 
@@ -47,7 +47,7 @@ function chatbotResponse(userMessage){
     
     
     setTimeout(()=> {
-        messageElement.innerHTML = "<span><b>Chatbot: </b></span>" +
+        messageElement.innerHTML = "<span><b>🤖 </b></span>" +
         "<span>" + chatbotMessage + "</span>";
 
         messageElement.animate([{easing:"ease-in", opacity:0.6}, {opacity:1}], {duration:500})
